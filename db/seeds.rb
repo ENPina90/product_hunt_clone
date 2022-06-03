@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Making products"
+5.times do
+  product = Product.create(
+    name: Faker::Company.name,
+    tagline: Faker::Company.catch_phrase
+  )
+  puts "made #{product.name}"
+end
